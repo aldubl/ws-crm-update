@@ -1,0 +1,17 @@
+name: 'ws-crm-update'
+description: 'ws-crm-update'
+inputs:
+  url:
+    description: 'server url'
+    required: true
+    default: 'localhost:3017'
+  comand:
+    description: 'comand'
+    required: true
+    default: 'update'
+outputs:
+  output: # id of output
+    description: 'output'
+runs:
+  using: 'node20'
+  main: 'client.js'
