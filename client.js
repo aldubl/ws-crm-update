@@ -17,7 +17,7 @@ try {
 	ws.on('message', function incoming(data) {
 		var res = data.toString('utf8')
 
-		if (res = 'bad'){
+		if (res === 'bad'){
 			core.setFailed('Сервер не смог разобрать команду');
 		} else if (res === 'close') {
 			console.log('Завершение');
