@@ -13,9 +13,8 @@ try {
 	
 	ws.on('open', function open() {
 		console.log('Connection ok');
-		ws.send('comand'); // Замените на ваши аргументы
+		ws.send(comand);
 	});
-
 
 	ws.on('message', function incoming(data) {
 		var res = data.toString('utf8')
@@ -38,5 +37,5 @@ try {
 	core.setOutput("output", "ok3");
 
 } catch (error) {
-  core.setFailed(error.message);
+	core.setFailed(error.message);
 }
