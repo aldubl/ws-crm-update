@@ -6,6 +6,9 @@ try {
 
 	const url = core.getInput('url');
 	const comand = core.getInput('comand');
+
+	console.log(url);
+	console.log(comand);
 	
 	const ws = new WebSocket('ws://' + url);
 	
