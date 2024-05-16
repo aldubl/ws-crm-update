@@ -15,16 +15,22 @@ try {
 	});
 
 	ws.on('message', function incoming(data) {
-		var res = data.toString('utf8')
+		var res = data.toString('utf8');
 
-		if (res === 'bad'){
-			core.setFailed('Сервер не смог разобрать команду');
-		} else if (res === 'close') {
-			console.log('Завершение');
-			ws.close();
-		} else {
-			console.log(res);
+		switch (res) {
+		    case 'bad':
+		        core.setFailed('Сервер не смог разобрать команду');
+		        ws.close();
+		        break;
+		    case 'close':
+		        console.log('Завершение');
+		        ws.close();
+		        break;
+		    default:
+		        console.log(res);
+		        break;
 		}
+
 	});
 
 	ws.on('close', function close() {
