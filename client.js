@@ -21,6 +21,10 @@ try {
 		var res = data.toString('utf8');
 
 		switch (res) {
+		    case 'error':
+		        core.setFailed('Выполнение завершилось с ошибкой.');
+		        ws.close();
+		        break;
 		    case 'bad':
 		        core.setFailed('Сервер не смог разобрать команду');
 		        ws.close();
