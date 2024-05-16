@@ -37,5 +37,10 @@ try {
 	core.setOutput("output", "ok3");
 
 } catch (error) {
+	const url = core.getInput('url');
+	const comand = core.getInput('comand');
+
+	console.log(url);
+	console.log(comand);
 	core.setFailed(error.message);
 }

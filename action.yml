@@ -10,7 +10,7 @@ inputs:
     required: true
     default: 'update'
 outputs:
-  output: # id of output
+  output:
     description: 'output'
 runs:
   using: 'node16'
