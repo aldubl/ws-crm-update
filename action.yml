@@ -13,5 +13,5 @@ outputs:
   output: # id of output
     description: 'output'
 runs:
-  using: 'node20'
+  using: 'node16'
   main: 'client.js'
