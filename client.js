@@ -49,5 +49,5 @@ try {
 	const url = core.getInput('url');
 	const comand = core.getInput('comand');
 
-	core.setFailed(error.message);
+	core.setFailed("Ошибка при выполнении: " + error.message);
 }
