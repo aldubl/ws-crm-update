@@ -9,6 +9,12 @@ try {
 	const url = core.getInput('url');
 	const comand = core.getInput('comand');
 
+} catch (error) {
+	core.setFailed("Ошибка чтения параметров: " + error.message);
+}
+
+try {
+
 	console.log(url);
 	console.log(comand);
 	
