@@ -6,19 +6,13 @@ console.log("Запуск");
 
 try {
 
-	const url = core.getInput('url');
+	const url = 'ws://' + core.getInput('url');
 	const comand = core.getInput('comand');
-
-} catch (error) {
-	core.setFailed("Ошибка чтения параметров: " + error.message);
-}
-
-try {
 
 	console.log(url);
 	console.log(comand);
 	
-	const ws = new WebSocket('ws://' + url);
+	const ws = new WebSocket(url);
 	
 	ws.on('open', function open() {
 		console.log('Подключение удалось');
@@ -56,6 +50,9 @@ try {
 } catch (error) {
 	const url = core.getInput('url');
 	const comand = core.getInput('comand');
+
+	console.log(url);
+	console.log(comand);
 
 	core.setFailed("Ошибка при выполнении: " + error.message);
 }
