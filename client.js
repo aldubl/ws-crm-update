@@ -2,6 +2,8 @@ const core = require('@actions/core');
 const github = require('@actions/github');
 const WebSocket = require('ws');
 
+console.log("Запуск");
+
 try {
 
 	const url = core.getInput('url');
